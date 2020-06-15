@@ -41,13 +41,11 @@
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
-            this.button6 = new System.Windows.Forms.Button();
             this.listView = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Performance = new MetroFramework.Controls.MetroTabPage();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lblRAM = new MetroFramework.Controls.MetroLabel();
@@ -71,8 +69,6 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pRAM = new System.Diagnostics.PerformanceCounter();
             this.pCPU = new System.Diagnostics.PerformanceCounter();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -162,7 +158,6 @@
             // 
             // metroTabPage1
             // 
-            this.metroTabPage1.Controls.Add(this.button6);
             this.metroTabPage1.Controls.Add(this.btnEndTask);
             this.metroTabPage1.Controls.Add(this.listView);
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
@@ -177,24 +172,13 @@
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.VerticalScrollbarSize = 10;
             // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(417, 345);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 35);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "High";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
             // listView
             // 
             this.listView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader10,
             this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
+            this.columnHeader3});
             this.listView.FullRowSelect = true;
             this.listView.HideSelection = false;
             this.listView.Location = new System.Drawing.Point(1, 3);
@@ -208,26 +192,22 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Process";
-            this.columnHeader1.Width = 108;
+            this.columnHeader1.Width = 144;
             // 
             // columnHeader10
             // 
             this.columnHeader10.Text = "PID";
-            this.columnHeader10.Width = 76;
+            this.columnHeader10.Width = 98;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Memory";
-            this.columnHeader2.Width = 106;
+            this.columnHeader2.Width = 120;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Priority Base";
-            this.columnHeader3.Width = 103;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Thread";
+            this.columnHeader3.Width = 88;
             // 
             // Performance
             // 
@@ -453,9 +433,7 @@
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader5,
             this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9});
+            this.columnHeader7});
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(3, 3);
             this.listView1.Name = "listView1";
@@ -473,22 +451,12 @@
             // columnHeader6
             // 
             this.columnHeader6.Text = "Status";
-            this.columnHeader6.Width = 91;
+            this.columnHeader6.Width = 125;
             // 
             // columnHeader7
             // 
             this.columnHeader7.Text = "Start Type";
-            this.columnHeader7.Width = 94;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Can Pause and Continue";
-            this.columnHeader8.Width = 88;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Can Stop";
-            this.columnHeader9.Width = 83;
+            this.columnHeader7.Width = 122;
             // 
             // pRAM
             // 
@@ -539,35 +507,35 @@
             // realTimeToolStripMenuItem
             // 
             this.realTimeToolStripMenuItem.Name = "realTimeToolStripMenuItem";
-            this.realTimeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.realTimeToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
             this.realTimeToolStripMenuItem.Text = "Real Time";
             this.realTimeToolStripMenuItem.Click += new System.EventHandler(this.realTimeToolStripMenuItem_Click);
             // 
             // highToolStripMenuItem
             // 
             this.highToolStripMenuItem.Name = "highToolStripMenuItem";
-            this.highToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.highToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
             this.highToolStripMenuItem.Text = "High";
             this.highToolStripMenuItem.Click += new System.EventHandler(this.highToolStripMenuItem_Click);
             // 
             // aboveNormalToolStripMenuItem
             // 
             this.aboveNormalToolStripMenuItem.Name = "aboveNormalToolStripMenuItem";
-            this.aboveNormalToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.aboveNormalToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
             this.aboveNormalToolStripMenuItem.Text = "Above Normal";
             this.aboveNormalToolStripMenuItem.Click += new System.EventHandler(this.aboveNormalToolStripMenuItem_Click);
             // 
             // normalToolStripMenuItem
             // 
             this.normalToolStripMenuItem.Name = "normalToolStripMenuItem";
-            this.normalToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.normalToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
             this.normalToolStripMenuItem.Text = "Normal";
             this.normalToolStripMenuItem.Click += new System.EventHandler(this.normalToolStripMenuItem_Click);
             // 
             // lowToolStripMenuItem
             // 
             this.lowToolStripMenuItem.Name = "lowToolStripMenuItem";
-            this.lowToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.lowToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
             this.lowToolStripMenuItem.Text = "Below Normal";
             this.lowToolStripMenuItem.Click += new System.EventHandler(this.lowToolStripMenuItem_Click);
             // 
@@ -624,7 +592,6 @@
         private MetroFramework.Controls.MetroProgressBar metroProgressBarCPU;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
@@ -639,9 +606,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.ColumnHeader columnHeader9;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;

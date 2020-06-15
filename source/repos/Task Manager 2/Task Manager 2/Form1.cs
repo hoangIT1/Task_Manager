@@ -58,7 +58,6 @@ namespace Task_Manager_2
                 newproc.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = p.Id.ToString() });
                 newproc.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = BytesToReadableValue(p.PrivateMemorySize64) });
                 newproc.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = p.BasePriority.ToString() });
-                newproc.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = p.Threads.ToString() });
                 ///newproc.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = extraProcessInfo.Username });
                 ///newproc.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = extraProcessInfo.Description });
                 listView.Items.Add(newproc);
@@ -70,7 +69,6 @@ namespace Task_Manager_2
                 ListViewItem newser = new ListViewItem() { Text = service.ServiceName };
                 newser.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = service.Status.ToString() });
                 newser.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = service.StartType.ToString() });
-                newser.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = service.CanPauseAndContinue.ToString() });
                 
                 listView1.Items.Add(newser);
                 
@@ -260,21 +258,7 @@ namespace Task_Manager_2
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void button6_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (listView.SelectedItems.Count > 0)
-                {
-                    proc[listView.SelectedIndices[0]].PriorityClass = ProcessPriorityClass.High;
-                    GetAllProcess();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        
 
         private void timer1_Tick(object sender, EventArgs e)
         {
